@@ -1,0 +1,5 @@
+.appBar { 
+  background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 5px 10px #88888800 !important;
+  color: white !important;
+}
