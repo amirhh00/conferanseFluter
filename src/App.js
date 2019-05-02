@@ -25,18 +25,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
         {this.props.children}
       </div>
     );
   }
 }
-
-App.propTypes = {
-  sideMenuVisible: PropTypes.bool.isRequired,
-  closeMenu: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-};
 
 App.defaultProps = {
   children: null,
@@ -46,9 +40,4 @@ const mapStateToProps = state => ({
   sideMenuVisible: isMenuVisible(state.navbar),
 });
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    { closeMenu },
-  )(App),
-);
+export default withRouter(connect(null,{ closeMenu },)(App),);

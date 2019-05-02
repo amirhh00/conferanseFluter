@@ -1,5 +1,5 @@
 import React from 'react';
-import Overview from '../../components/Overview';
+import Moghadame from '../../components/Moghadame';
 
 export default [
   // {
@@ -15,15 +15,14 @@ export default [
   //   ]
   // },
   {
-    id: "bored",
-    className: "slide",
-    // duration : 3000,
+    id: "moghadame",
+    className: "slide logo",
     data: {
       x: -1000,
       y: -1500,
     },
     content: [
-      <Overview />
+      <Moghadame />
     ]
   },
   {

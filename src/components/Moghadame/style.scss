@@ -1,0 +1,11 @@
+.fadein{
+  opacity: 0;
+  line-height: 90;
+  transition: all 2.3s ease-in-out;
+  overflow: hidden;
+  font-family: B Titr;
+  &.animate{
+    opacity: 1;
+    line-height: inherit;
+  }
+}

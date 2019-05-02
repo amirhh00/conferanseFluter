@@ -22,6 +22,7 @@ class NavBar extends Component {
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
+  
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
@@ -68,9 +69,10 @@ class NavBar extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  size: state.navbar.resize,
-  nav_link_color: state.navbar.navLinkColor,
-});
+function mapStateToProps(state) {
+  return {
+    navbar : state.navbar,
+  }
+}
 
 export default connect(mapStateToProps, { deviceSize, changeNavLinkColor })(withRouter(NavBar));

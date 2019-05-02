@@ -25,6 +25,14 @@ module.exports = {
         },
       },
       {
+        test: /\.html$/,
+        loader: 'html-loader?attrs[]=video:src'
+      },
+      {
+        test: /\.(mov|mp4)$/,
+        loader: 'url-loader'
+      },
+      {
         test: /\.(svg)$/i,
         loaders: [
           {
@@ -77,7 +85,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "app/css/[name].css",
     }),
-    new OpenBrowserPlugin({ url: 'http://localhost/', browser: "chrome" }),
+    // new OpenBrowserPlugin({ url: 'http://localhost/', browser: "chrome" }),
   ],
   optimization: {
     splitChunks: {

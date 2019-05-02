@@ -1,20 +1,26 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import store from './configureStore';
+import { ConnectedRouter } from 'connected-react-router';
+
 import App from './App';
+import configureStore from './configureStore';
 import { ThemeProvider } from 'react-css-themr';
 import "@babel/polyfill/noConflict"
 import Home from './views/Home';
 import NoMatch from './views/NoMatch';
-
+import history from './config/history'
 import './index.scss';
 import theme from './config/theme';
 
-render(
+const initialState = {};
+const store = configureStore(initialState, history);
+
+ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <ConnectedRouter history={history}>
+      <HashRouter>
       <ThemeProvider theme={theme}>
         <App>
           <Switch>
@@ -27,11 +33,12 @@ render(
             {/* <Route path="/product/:productId" component={Product} /> */}
             {/* <Route path="/search/:search" component={Search} /> */}
             {/* <Route path="/cart" component={Cart} /> */}
-            <Route component={NoMatch}/>
+            <Route component={NoMatch} />
           </Switch>
         </App>
       </ThemeProvider>
-    </HashRouter>
+      </HashRouter>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root'),
 );
