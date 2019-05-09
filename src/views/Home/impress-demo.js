@@ -1,21 +1,28 @@
 import React from 'react';
+import { FaAngleLeft } from 'react-icons/fa';
 import Moghadame from '../../components/Moghadame';
+import Moarefi from '../../components/Moarefi';
+import Native from '../../components/Native';
+import WebView from '../../components/WebView';
+import JSFramWorks from './../../components/JavascriptFrameworks'
+import PWA from './../../components/PWA';
+import Xamarin from './../../components/Xamarin'
 
 export default [
-  // {
-  //   id: "overview",
-  //   className: "slide",
-  //   data: {
-  //     x: 3500,
-  //     y: 3000,
-  //     z: 20000
-  //   },
-  //   content: [
-  //     <span></span>
-  //   ]
-  // },
   {
-    id: "moghadame",
+    id: "01",
+    className: "_slide",
+    data: {
+      x: 3500,
+      y: 3000,
+      z: 20000
+    },
+    content: [
+      <span></span>
+    ]
+  },
+  {
+    id: "02",
     className: "slide logo",
     data: {
       x: -1000,
@@ -30,42 +37,117 @@ export default [
       y: -1500
     },
     content: [
-      <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+      <div style={{width:'100%',display:'flex',flexDirection:'column'}} >
+        <h4 style={{textAlign:'center'}}>فهرست</h4><br/>
+        <p style={{textAlign:'center'}}>(معرفی فلاتر (صفحه &#1780; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(مقایسه فلاتر (صفحه &#1781; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(امکانات جدید (صفحه &#1782; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(نتیجه گیری (صفحه &#1783; <FaAngleLeft /> </p>
+
+      </div>
     ]
   },
   {
-    className: "slide",
+    id: "Moarefi",
     data: {
       x: 1000,
       y: -1500
     },
     content: [
-      <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+      <Moarefi />
     ]
   },
   {
-    id: "title",
     data: {
+      x: -1000,
+      y: 700,
       scale: 4
     },
     content: [
-      <span className="try">then you should try</span>,
-      <h1>impress.js<sup>*</sup></h1>,
-      <span className="footnote"><sup>*</sup> no rhyme intended</span>
+      <div style={{textAlign:'center'}} >
+        <h1 style={{marginRight:'-50px'}} >چرا</h1>
+        <span style={{marginRight:'50px'}} className="try">فلاتر خوبه؟</span>
+      </div>,
     ]
   },
   {
-    id: "its",
+    id: "compare",
     data: {
-      x: 850,
+      x: 550,
       y: 3000,
       rotateZ: 90,
       scale: 5
     },
     content: [
-      <p>It’s a <strong>presentation tool</strong> <br />
-        inspired by the idea behind <a href="http://prezi.com" target="_blank" rel="nofollow">prezi.com</a> <br />
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+      <div dir="rtl">
+        <h4 >تکنولوژی های مشابه</h4>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> زبان های Native  </p>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> WebView ها </p>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> ابزار های جاوااسکریپت </p>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> PWA </p>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> Xamarin </p>
+      </div>
+    ]
+  },
+  {
+    id: "nativeLangs",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -6000,
+      rotateZ: 300,
+      scale: 1
+    },
+    content: [
+      <Native />
+    ]
+  },{
+    id: "webView",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -8000,
+      rotateZ: 300,
+      scale: 1
+    },
+    content: [
+      <WebView />
+    ]
+  },{
+    id: "jsFrameWorks",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -10000,
+      rotateZ: 300,
+      scale: 1
+    },
+    content: [
+      <JSFramWorks />
+    ]
+  },{
+    id: "PWA",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -12000,
+      rotateZ: 300,
+      scale: 1
+    },
+    content: [
+      <PWA />
+    ]
+  },{
+    id: "xamarin",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -14000,
+      rotateZ: 300,
+      scale: 1
+    },
+    content: [
+      <Xamarin />
     ]
   },
   {
@@ -80,19 +162,19 @@ export default [
       <p>visualize your <b>big</b> <span className="thoughts">thoughts</span></p>
     ]
   },
-  {
-    id: "tiny",
-    data: {
-      x: 2825,
-      y: 2325,
-      z: -3000,
-      rotateZ: 300,
-      scale: 1
-    },
-    content: [
-      <p>and <b>tiny</b> ideas</p>
-    ]
-  },
+  // {
+  //   id: "tiny",
+  //   data: {
+  //     x: 2825,
+  //     y: 2325,
+  //     z: -3000,
+  //     rotateZ: 300,
+  //     scale: 1
+  //   },
+  //   content: [
+  //     <p>and <b>tiny</b> ideas</p>
+  //   ]
+  // },
   {
     id: "ing",
     data: {

@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{fontFamily: 'IRANSans'}} >
         {/* <NavBar /> */}
         {this.props.children}
       </div>

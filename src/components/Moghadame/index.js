@@ -15,11 +15,11 @@ class Moghadame extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.hash !== this.props.hash && nextProps.hash.includes("moghadame")) {
+    if (nextProps.hash !== this.props.hash && nextProps.hash.includes("02")) {
       setTimeout(() => {
         this.player.play();
         this.setState({animateClassNames : this.state.animateClassNames + " animate"})
-      }, 1500);
+      }, 500);
     }else{
       this.setState({animateClassNames : "fadein "})
     }
@@ -27,7 +27,7 @@ class Moghadame extends Component {
 
   render() {
     return (
-      <div style={{display:'flex',flexDirection:'column',alignItems:'center',height:'100%'}} >
+      <div className={this.state.animateClassNames} style={{display:'flex',flexDirection:'column',alignItems:'center',height:'100%'}} >
         <div style={{width:'50%',marginTop:'-40px'}}>
           <Player ref={c => { this.player = c }}
             playsInline
@@ -37,7 +37,7 @@ class Moghadame extends Component {
           </Player>
         </div>
         <span style={{position:'absolute',top : 0 , right : 0}} ><img src="images/logo.png" /></span>
-        <div className={this.state.animateClassNames} style={{textAlign:'center',marginTop:20}} >
+        <div style={{textAlign:'center',marginTop:20}} >
           <h4>گروه مهندسی کامپیوتر</h4>
           <h4>ارائه کننده : امیرحسین اسماعیلی</h4>
           <h4>موضوع : فِلاتر</h4>
