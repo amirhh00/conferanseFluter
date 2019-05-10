@@ -17,7 +17,7 @@ class Native extends Component {
       setTimeout(() => {
         // this.player.play();
         this.setState({animateClassNames : this.state.animateClassNames + " animate"})
-      }, 700);
+      }, 300);
     }else{
       this.setState({animateClassNames : "fadein "})
     }

@@ -7,6 +7,16 @@ import WebView from '../../components/WebView';
 import JSFramWorks from './../../components/JavascriptFrameworks'
 import PWA from './../../components/PWA';
 import Xamarin from './../../components/Xamarin'
+import Flutter1 from './../../components/Flutter'
+import Beautiful from '../../components/Flutter/Beautiful';
+import Productive from './../../components/Flutter/Productive'
+import Fast from './../../components/Flutter/Fast'
+import Open from './../../components/Flutter/Open'
+import Perfect from '../../components/Perfect';
+import FWeb from '../../components/Perfect/FWeb';
+import FDesktop from '../../components/Perfect/FDesktop';
+import FEmbedded from '../../components/Perfect/FEmbedded';
+
 
 export default [
   {
@@ -15,7 +25,7 @@ export default [
     data: {
       x: 3500,
       y: 3000,
-      z: 20000
+      z: 10000
     },
     content: [
       <span></span>
@@ -25,7 +35,6 @@ export default [
     id: "02",
     className: "slide logo",
     data: {
-      x: -1000,
       y: -1500,
     },
     content: [
@@ -34,15 +43,16 @@ export default [
   },
   {
     data: {
+      x: 2000,
       y: -1500
     },
     content: [
       <div style={{width:'100%',display:'flex',flexDirection:'column'}} >
         <h4 style={{textAlign:'center'}}>فهرست</h4><br/>
         <p style={{textAlign:'center'}}>(معرفی فلاتر (صفحه &#1780; <FaAngleLeft /> </p>
-        <p style={{textAlign:'center'}}>(مقایسه فلاتر (صفحه &#1781; <FaAngleLeft /> </p>
-        <p style={{textAlign:'center'}}>(امکانات جدید (صفحه &#1782; <FaAngleLeft /> </p>
-        <p style={{textAlign:'center'}}>(نتیجه گیری (صفحه &#1783; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(مقایسه فلاتر (صفحه &#1782; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(آینده فلاتر (صفحه &#1777;&#1784; <FaAngleLeft /> </p>
+        <p style={{textAlign:'center'}}>(نتیجه گیری (صفحه &#1778;&#1778; <FaAngleLeft /> </p>
 
       </div>
     ]
@@ -50,7 +60,7 @@ export default [
   {
     id: "Moarefi",
     data: {
-      x: 1000,
+      x: 4000,
       y: -1500
     },
     content: [
@@ -59,9 +69,9 @@ export default [
   },
   {
     data: {
-      x: -1000,
+      x: 0,
       y: 700,
-      scale: 4
+      scale: 7
     },
     content: [
       <div style={{textAlign:'center'}} >
@@ -73,19 +83,20 @@ export default [
   {
     id: "compare",
     data: {
-      x: 550,
+      x: 250,
       y: 3000,
       rotateZ: 90,
-      scale: 5
+      scale: 3
     },
     content: [
       <div dir="rtl">
-        <h4 >تکنولوژی های مشابه</h4>
+        <h4 >تکنولوژی های توسعه موبایل</h4>
         <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> زبان های Native  </p>
         <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> WebView ها </p>
         <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> ابزار های جاوااسکریپت </p>
         <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> PWA </p>
         <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> Xamarin </p>
+        <p style={{marginRight:50,lineHeight:'2em'}}><FaAngleLeft /> Flutter </p>
       </div>
     ]
   },
@@ -101,7 +112,8 @@ export default [
     content: [
       <Native />
     ]
-  },{
+  },
+  {
     id: "webView",
     data: {
       x: 550,
@@ -113,7 +125,8 @@ export default [
     content: [
       <WebView />
     ]
-  },{
+  },
+  {
     id: "jsFrameWorks",
     data: {
       x: 550,
@@ -125,7 +138,8 @@ export default [
     content: [
       <JSFramWorks />
     ]
-  },{
+  },
+  {
     id: "PWA",
     data: {
       x: 550,
@@ -137,7 +151,8 @@ export default [
     content: [
       <PWA />
     ]
-  },{
+  },
+  {
     id: "xamarin",
     data: {
       x: 550,
@@ -151,81 +166,148 @@ export default [
     ]
   },
   {
+    id: "flutter1",
+    data: {
+      x: 550,
+      y: 3000,
+      z: -16000,
+      
+      scale: 1
+    },
+    content: [
+      <Flutter1 />
+    ]
+  },
+  {
+    id: "beautiful",
+    data: {
+      x: 1550,
+      y: 3000,
+      z: -16000,
+      
+      scale: 1
+    },
+    content: [
+      <Beautiful />
+    ]
+  },
+  {
+    id: "productive",
+    data: {
+      x: 2550,
+      y: 3000,
+      z: -16000,
+      
+      scale: 1
+    },
+    content: [
+      <Productive />
+    ]
+  },
+  {
+    id: "fast",
+    data: {
+      x: 3550,
+      y: 3000,
+      z: -16000,
+      
+      scale: 1
+    },
+    content: [
+      <Fast />
+    ]
+  },
+  {
+    id: "open",
+    data: {
+      x: 4550,
+      y: 3000,
+      z: -16000,
+      
+      scale: 1
+    },
+    content: [
+      <Open />
+    ]
+  },
+  {
     id: "big",
     data: {
       x: 3500,
-      y: 2100,
+      y: 1100,
       rotateZ: 180,
       scale: 6
     },
     content: [
-      <p>visualize your <b>big</b> <span className="thoughts">thoughts</span></p>
+      <p> <b>چرا</b>فلاتر <span className="thoughts">عالیه؟</span></p>
     ]
   },
-  // {
-  //   id: "tiny",
-  //   data: {
-  //     x: 2825,
-  //     y: 2325,
-  //     z: -3000,
-  //     rotateZ: 300,
-  //     scale: 1
-  //   },
-  //   content: [
-  //     <p>and <b>tiny</b> ideas</p>
-  //   ]
-  // },
   {
-    id: "ing",
+    id: "perfect",
     data: {
-      x: 3500,
-      y: -850,
+      x: 6500,
+      y: 1500,
+      rotateZ: 270,
+      scale: 4
+    },
+    content: [
+      <Perfect />
+    ]
+  },
+  {
+    id: "fweb",
+    data: {
+      x: 1500,
+      y: -3500,
+      z: -8000,
       rotateZ: 270,
       scale: 6
     },
     content: [
-      <p>by <b className="positioning">positioning</b>, <b className="rotating">rotating</b> and <b className="scaling">scaling</b> them on an infinite canvas</p>
+      <FWeb />
+    ]
+  },
+  {
+    id: "fdesktop",
+    data: {
+      x: 1500,
+      y: -3500,
+      z: -10000,
+      rotateZ: 270,
+      scale: 6
+    },
+    content: [
+      <FDesktop />
+    ]
+  },
+  {
+    id: "fembedded",
+    data: {
+      x: 1500,
+      y: -3500,
+      z: -12000,
+      rotateZ: 270,
+      scale: 6
+    },
+    content: [
+      <FEmbedded />
     ]
   },
   {
     id: "imagination",
     data: {
       x: 6700,
-      y: -300,
+      y: 4500,
       scale: 6
     },
     content: [
-      <p>the only <b>limit</b> is your <b className="imagination scaling-up">imagination</b></p>
+      <p style={{textAlign:'center'}} ><b className="imagination scaling-up">نتیجه گیری</b></p>
     ]
   },
   {
-    id: "source",
+    id: "resources",
     data: {
-      x: 6300,
-      y: 2000,
-      rotateZ: 20,
-      scale: 4
-    },
-    content: [
-      <p>want to know more?</p>,
-      <q><a href="http://github.com/bartaz/impress.js" target="_blank" rel="nofollow">use the source</a>, Luke!</q>
-    ]
-  },
-  {
-    id: "one-more-thing",
-    data: {
-      x: 6000,
-      y: 4000,
-      scale: 2
-    },
-    content: [
-      <p>one more thing...</p>
-    ]
-  },
-  {
-    id: "its-in-3d",
-    data: {
-      x: 6200,
+      x: 3200,
       y: 4300,
       z: -100,
       rotateX: -40,
@@ -233,12 +315,21 @@ export default [
       scale: 2
     },
     content: [
-      <p><span className="have">have</span> <span className="you">you</span> <span className="noticed">noticed</span> <span className="its">it’s</span> <span className="in">in</span> <b>3D<sup>*</sup></b>?</p>,
-      <span className="footnote">* beat that, prezi ;)</span>
+      <div style={{textAlign:'right' , direction:'rtl'}} >
+        <h1>منابع</h1><br />
+        <ul>
+          <li><a href="flutter.dev">flutter.dev</a></li>
+          <li><a href="youtube.com">youtube.com</a></li>
+          <li><a href="pub.dartlang.org">pub.dartlang.org</a></li>
+          <li><a href="dart.dev">dart.dev</a></li>
+          <li><a href="medium.com">medium.com</a></li>
+        </ul>
+        
+      </div>
     ]
-  },
+  },  
   {
-    id: "by-react-impressjs",
+    id: "tnx",
     data: {
       x: 3000,
       y: 6000,
@@ -248,7 +339,11 @@ export default [
       scale: 10
     },
     content: [
-      // <p>This demo of impress.js is made via <a href="https://github.com/GeorgioWan/react-impressjs" target="_blank">React-impressJS</a></p>
+      <div dir="rtl" >
+        <h3>پایان.. </h3>
+        <p>سوال ؟ </p>
+        <p>ممنون از وقتتون</p>
+      </div>
     ]
   }
 ];

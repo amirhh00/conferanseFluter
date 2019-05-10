@@ -6,7 +6,7 @@ import { withRouter } from 'react-router';
 import { isMenuVisible } from './components/NavBar/reducer';
 import { closeMenu } from './components/NavBar/actions';
 import NavBar from './components/NavBar';
-
+import TimerComponent from './components/Timer'
 import './App.scss';
 
 class App extends Component {
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div style={{fontFamily: 'IRANSans'}} >
-        {/* <NavBar /> */}
+        <TimerComponent />
         {this.props.children}
       </div>
     );

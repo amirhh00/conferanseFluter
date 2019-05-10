@@ -17,7 +17,7 @@ class WebView extends Component {
       setTimeout(() => {
         // this.player.play();
         this.setState({animateClassNames : this.state.animateClassNames + " animate"})
-      }, 700);
+      }, 300);
     }else{
       this.setState({animateClassNames : "fadein "})
     }
@@ -37,7 +37,10 @@ class WebView extends Component {
         <span style={{position:'absolute',top : 0 , right : 0}} ><img src="images/logo.png" /></span> */}
         <div style={{textAlign:'right',marginTop:20}} >
           <h4>WebView</h4>
-        </div>
+        </div><br />
+        <img style={{width : '50%'}} src="images/PhoneGap.png" />
+        <img style={{width : '50%'}} src="images/ionicLogo.png" />
+        <img style={{width : '50%'}} src="images/framework7.png" />
       </div>
     )
   }

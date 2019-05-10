@@ -54,6 +54,7 @@
     "pure-react-carousel": "^1.17.0",
     "rc-tabs": "^9.6.0",
     "react": "next",
+    "react-compound-timer": "^1.0.13",
     "react-css-themr": "^2.1.2",
     "react-dom": "next",
     "react-ga": "^2.5.3",

@@ -17,7 +17,7 @@ class PWA extends Component {
       setTimeout(() => {
         // this.player.play();
         this.setState({animateClassNames : this.state.animateClassNames + " animate"})
-      }, 700);
+      }, 300);
     }else{
       this.setState({animateClassNames : "fadein "})
     }
@@ -37,7 +37,11 @@ class PWA extends Component {
         <span style={{position:'absolute',top : 0 , right : 0}} ><img src="images/logo.png" /></span> */}
         <div style={{textAlign:'right',marginTop:20}} >
           <h4>PWA</h4>
-        </div>
+        </div><br />
+        <img style={{width : '35%'}} src="images/reactLogo.png" />
+        <img style={{width : '35%'}} src="images/angularLogo.png" />
+        <img style={{width : '35%'}} src="images/workboxLogo.png" />
+        <img style={{width : '35%'}} src="images/ionicLogo.png" />
       </div>
     )
   }
