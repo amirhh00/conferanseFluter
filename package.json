@@ -94,7 +94,8 @@
     "whatwg-fetch": "2.0.4"
   },
   "scripts": {
-    "start": "webpack --watch --mode=development",
+    "dev": "webpack --watch --mode=development",
+    "start": "serve app -s -p 80",
     "build": "webpack --mode=production",
     "test": "react-scripts test --env=jsdom"
   }
