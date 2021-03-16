@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { Player } from "video-react";
 
-class Perfect extends Component {
+class Flutter2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ class Perfect extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.hash !== this.props.hash && nextProps.hash.includes("perfect")) {
+    if (nextProps.hash !== this.props.hash && nextProps.hash.includes("flutter2")) {
       setTimeout(() => {
         // this.player.play();
         this.setState({ animateClassNames: this.state.animateClassNames + " animate" });
@@ -25,7 +25,7 @@ class Perfect extends Component {
 
   render() {
     return (
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
+      <div className={this.state.animateClassNames} style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
         {/* <div style={{width:'50%',marginTop:'-40px'}}>
           <Player ref={c => { this.player = c }}
             playsInline
@@ -35,16 +35,10 @@ class Perfect extends Component {
           </Player>
         </div>
         <span style={{position:'absolute',top : 0 , right : 0}} ><img src="images/logo.png" /></span> */}
-        <div style={{ textAlign: "right", marginTop: 20 }}>{/* <h4>آینده فلاتر</h4> */}</div>
-        <br />
-        <div style={{ display: "flex", width: "100%", alignItems: "center", direction: "rtl" }}>
-          <ul style={{ listStyleType: "square", width: "100%" }}>
-            <li>فلاتر در وب</li>
-            <li>فلاتر در دسکتاپ</li>
-            <li>فلاتر در سیستم های Embedded</li>
-            <li>فلاتر 2</li>
-          </ul>
+        <div style={{ textAlign: "right", marginTop: 20 }}>
+          <h4>فلاتر 2</h4>
         </div>
+        <img src="images/flutter2.png" />
       </div>
     );
   }
@@ -56,4 +50,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withRouter(Perfect));
+export default connect(mapStateToProps)(withRouter(Flutter2));
