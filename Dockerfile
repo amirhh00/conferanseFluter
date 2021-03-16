@@ -7,4 +7,4 @@ COPY package.json /app
 RUN yarn install
 COPY . /app
 RUN yarn build
-CMD ["serve","app","-s"]
+CMD ["serve","app","-s","-p","80"]
